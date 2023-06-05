@@ -1,7 +1,7 @@
 version: '3.6'
 services:
-  comments:
-    container_name: comments
+  comments_back:
+    container_name: comments_back
     restart: always
     build: .
     volumes:
