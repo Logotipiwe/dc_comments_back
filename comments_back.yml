@@ -3,7 +3,7 @@ services:
   comments_back:
     container_name: comments_back
     restart: always
-    build: .
+    image: ${IMAGE}
     volumes:
       - ./src:/var/www/html
     networks:
