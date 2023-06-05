@@ -27,7 +27,7 @@ jobs:
       id: build_push
       run: |
         ls
-        export IMAGE=${{ env.DOCKER_USER }}/comments_back
+        export IMAGE=${{ env.DOCKER_USER }}/comments_back:$(date +%s)
         docker build . -t ${IMAGE}
         docker push -a ${IMAGE}
         echo "IMAGE=${IMAGE}" >> "$GITHUB_ENV"
