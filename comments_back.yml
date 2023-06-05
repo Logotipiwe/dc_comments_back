@@ -4,8 +4,6 @@ services:
     container_name: comments_back
     restart: always
     image: ${IMAGE}
-    volumes:
-      - ./src:/var/www/html
     networks:
       - dc-net
     environment:
