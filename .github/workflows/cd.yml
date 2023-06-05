@@ -49,5 +49,8 @@ jobs:
         port: 22
         script: |
           export IMAGE=${{ env.IMAGE }}
+          export MYSQL_ROOT_PASSWORD=${{ env.MYSQL_ROOT_PASSWORD }}
+          export DB_HOST=${{ env.DB_HOST }}
+          export DB_USER=${{ env.DB_USER }}
           docker-compose -f /kuber/comments_back/comments_back.yml down --remove-orphans
           docker-compose -f /kuber/comments_back/comments_back.yml up -d
