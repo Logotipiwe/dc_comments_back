@@ -29,7 +29,7 @@ jobs:
         ls
         export IMAGE=${{ env.DOCKER_USER }}/comments_back:$(date +%s)
         docker build . -t ${IMAGE}
-        docker push -a ${IMAGE}
+        docker push ${IMAGE}
         echo "IMAGE=${IMAGE}" >> "$GITHUB_ENV"
     - name: Upload
       uses: garygrossgarten/github-action-scp@release
