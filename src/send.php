@@ -4,9 +4,9 @@ require_once 'Env.php';
 header("Access-Control-Allow-Origin: *");
 $text = $_GET['text'];
 $utm = $_GET['utm'];
-if(strlen($text) > 35){
-    die(json_encode(['ok'=>false, 'err'=>"Слишком длинное сообщение"]));
-}
+//if(strlen($text) > 35){
+//    die(json_encode(['ok'=>false, 'err'=>"Слишком длинное сообщение"]));
+//}
 if($text === ""){
     die(json_encode(['ok'=>false, 'err'=>"Сообщение должно быть не пустое"]));
 }
