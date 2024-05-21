@@ -1,0 +1,17 @@
+version: '3.6'
+services:
+  comments_back:
+    container_name: comments_back
+    restart: always
+    build: .
+    networks:
+      - dc-net
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_LOGIN: ${DB_USER}
+      DB_PASS: ${MYSQL_ROOT_PASSWORD}
+      DB_NAME: log_comments
+
+networks:
+  dc-net:
+    external: true
