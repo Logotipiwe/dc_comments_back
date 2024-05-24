@@ -131,3 +131,12 @@ create table links
         primary key (id)
 );
 
+create table link_media
+(
+    id         int auto_increment
+        primary key,
+    max_width  int        not null,
+    sizes_data mediumtext not null,
+    columns    int        not null
+);
+
